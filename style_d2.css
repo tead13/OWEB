@@ -1,0 +1,49 @@
+
+body {
+    background-image: url(logo.png);
+    background-position: bottom right;
+    background-size: 70px 70px ;
+    background-repeat: no-repeat;
+    background-color: oldlace;
+}
+
+form {
+    background-color: blanchedalmond;
+    border: 2px solid maroon;
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px lightsalmon;
+}
+
+h1 {
+    text-shadow: -1px -1px 2px indianred;
+    font-size: 40px;
+    margin-top: 20px; 
+}
+
+h3 { 
+    font-style: italic;
+}
+
+/*animacijata se aktivira koga ke se stavi mouse cursor na nea*/
+img {
+    transition: transform 5s;
+}
+
+img:hover {
+    transform: rotate(360deg) scale(1.5,1.5);
+}
+
+input[type="submit"], input[type="reset"] {
+    background-color: lightsalmon;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+input[type="submit"]:hover, input[type="reset"]:hover {
+    background-color: maroon;
+}
+

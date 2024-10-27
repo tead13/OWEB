@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!-- vtora domasna zadaca -->
+<!-- stilizirana prva domasna zadaca -->
+<!-- ORDER PIZZA -->
+ 
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Tea's Pizza</title>
+        <link rel="stylesheet" type ="text/css" href="style_d2.css">
+    </head>
+
+    <body>
+        <center>
+            <h1>Order pizza!</h1>
+            <img src = "pizza.png" width="120" height="90" alt = "Slika od pica">
+            
+            <form method="post" action = "send.html">
+                <input type="hidden" name="recipient" value="https://korpa.mk/">
+                <input type="hidden" name="subject" value="Making an order">
+                <input type="hidden" name="redirect" value="main.html">
+                
+                
+                <h3>Select pizza size:</h3>
+                <p>
+                    <input type="radio" name="size" value="Extra big">Extra big<br>
+                    <input type="radio" name="size" value="Big" checked>Big<br>
+                    <input type="radio" name="size" value="Medium">Medium<br>
+                    <input type="radio" name="size" value="Small">Small<br>
+                </p>
+    
+                <h3>Select the crust type:</h3>
+                <p>
+                    <select>
+                        <option value="Deep dish">Deep dish</option>
+                        <option value="Gluten-Free">Gluten-Free</option>
+                        <option value="Whole wheat">Whole wheat</option>
+                        <option value="Neapolitan">Neapolitan</option>
+                        <option value="Sicilian">Sicilian</option>
+                        <option value="Stuffed with cheese">Stuffed with cheese</option>
+                    </select>
+                </p>
+    
+                <h3>Select the filler:</h3>
+                <p>
+                    <input type="checkbox" name="filler" value="Sausage">Sausage
+                    <input type="checkbox" name="filler" value="Pepper">Pepper<br>
+                    <input type="checkbox" name="filler" value="Tomato">Tomato
+                    <input type="checkbox" name="filler" value="Arugula">Arugula<br>
+                    <input type="checkbox" name="filler" value="Mushrooms">Mushrooms
+                    <input type="checkbox" name="filler" value="Olives">Olives<br>
+                    <input type="checkbox" name="filler" value="Gorgonzola">Gorgonzola
+                    <input type="checkbox" name="filler" value="Mozzarella">Mozzarella<br>
+                </p>
+
+                <p><label><strong>Name:</strong>
+                        <input name = "name" type = "text" size = "25" maxlength="40">
+                    </label><br>
+                    <label><strong>Phone:</strong>
+                        <input name = "phone" type = "text" size = "25" maxlength="40">
+                    </label><br>
+                    <textarea name="Message:" rows="5" cols="32" placeholder="Message:"></textarea>
+                </p>
+
+                <input type = "submit" value = "Send">
+                <input type = "reset" value = "Clear">
+            </form>            
+        </center>
+    </body>
+</html>
