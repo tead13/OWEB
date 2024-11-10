@@ -1,0 +1,128 @@
+body {
+    background-image: url(neon-green-line-pattern-dark-background_53876-99009.jpg) ;
+    background-position: center;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+.game-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-top: 20px;
+    text-align: center;
+    width: 800px;
+}
+
+.word-display {
+    font-size: 2em;
+    letter-spacing: 10px;
+    margin: 20px 0;
+}
+
+input {
+    font-size: 1.2em;
+    width: 200px;
+    padding: 5px;
+    margin: 10px;
+    text-transform: uppercase;
+}
+
+button {
+    font-size: 1.2em;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.attempts {
+    font-size: 1.2em;
+    margin: 10px;
+}
+
+.previous-attempts {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.game-display {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 20px 0;
+}
+
+.hangman-drawing {
+    border: 2px solid #333;
+    padding: 10px;
+    margin: 10px;
+    width: 200px;
+    height: 250px;
+}
+
+.keyboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 700px;
+    margin: 20px auto;
+}
+
+.keyboard-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3px;
+}
+
+.keyboard-button {
+    width: 40px !important;
+    height: 40px !important;
+    margin: 2px !important;
+    font-size: 1em !important;
+    border: 1px solid #333 !important;
+    background-color: darkseagreen!important;
+    border-radius: 4px !important;
+    cursor: pointer !important;
+}
+
+.keyboard-button:hover {
+    background-color: #d0d0d0 !important;
+}

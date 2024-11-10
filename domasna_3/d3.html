@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--treta domasna rabota-->
+<!--igra pogodi go zborot-->
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Бесилка</title>
+    <link rel="stylesheet" href="style_d3.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Погоди го зборот</h1>
+        <div class="game-display">
+           <canvas id="hangmanCanvas" class="hangman-drawing" width="200" height="250"></canvas>
+            <div>
+                <div class="word-display" id="wordDisplay"></div>
+                <div class="attempts" id="remainingAttempts">Преостанати обиди: 5</div>
+                <div class="previous-attempts" id="previousAttempts">Претходни обиди: </div>
+            </div>
+        </div>
+        <input type="text" id="guessInput" maxlength="5" placeholder="Внеси го зборот">
+        <button onclick="checkGuess()">Провери</button>
+        <button onclick="startNewGame()">Нова игра</button>
+
+        <!--tastatura-->        
+        <div class="keyboard-row" id="row1"></div> 
+        <div class="keyboard-row" id="row2"></div>
+        <div class="keyboard-row" id="row3"></div>
+    </div>
+
+    <div id="gameOverModal" class="modal">
+        <div class="modal-content">
+            <h2 id="modalTitle"></h2>
+            <p id="modalMessage"></p>
+            <button onclick="startNewGame();closeModal()">Нова игра</button>
+            <button onclick="closeModal()">Затвори</button>
+        </div>
+    </div>
+
+    <script src="script_d3.js"></script>
+</body>
+</html>
