@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Регистрација</title>    
+        <link rel="stylesheet" type="text/css" href="log_in.css">    
+    </head>
+    <body>
+        <form action="#" onsubmit="showSuccessModal(); return false;">
+            <h2>Регистрација</h2>
+            <div class="inputBox">
+                <input type="text" id="username" required>
+                <label for="username">Корисничко &nbsp; име</label>
+            </div>
+            <div class="inputBox">
+                <input type="text" id="email" required>
+                <label for="email">Email</label>
+            </div>
+            <div class="inputBox">
+                <input type="password" id="create-password" required>
+                <label for="create-password">Лозинка</label>
+            </div>
+            <div class="inputBox">
+                <input type="password" id="confirm-password" required>
+                <label for="confirm-password">Потврди &nbsp; лозинка</label>
+            </div>
+            <div class="inputBox">
+                <input type="submit" value="Регистрирај се">
+            </div>
+
+            <p>Регистрирај се за да ги следиш најдобрите понуди</p>
+        </form>
+
+        <!-- uspesna registracija -->
+        <div id="successModal" class="modal">
+            <div class="modal-content">
+                <h3>Успешно се регистриравте!</h3>
+                <p>Секогаш ќе ги добивате најновите понуди.</p>
+                <button onclick="goToHomePage()">Врати се на почетната страница</button>
+            </div>
+        </div>
+
+        <script>
+            //animacija na bukvi
+            document.querySelectorAll('label').forEach(label => {
+                label.innerHTML = label.innerText.split('').map((letters, i) => `<span style="transition-delay: ${i * 50}ms">${letters}</span>`).join('');
+            });
+
+            //uspesna registracija popup
+            function showSuccessModal() {
+                document.getElementById('successModal').style.display = 'flex';
+            }
+
+            //vrakjanje kon pocetna
+            function goToHomePage() {
+                window.location.href = 'proektna.html'; 
+            }
+
+            //zatvoranje na popup
+            window.onclick = function(event) {
+                const modal = document.getElementById('successModal');
+                if (event.target == modal) {
+                    modal.style.display = 'none';
+                }
+            };
+        </script>
+    </body>
+</html>

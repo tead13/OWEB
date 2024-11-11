@@ -1,0 +1,236 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+:root{
+    --crl: #eaef44;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: lightslategray;
+
+
+}
+
+form{
+    display: flex;
+    align-items: center;
+    background:#29313c ;
+    padding: 40px 80px 40px;
+    text-align: center;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 3px 5px var(--crl), 0 5px 10px var(--crl), 0 5px 30px var(--crl) ;
+
+}
+
+form h2{
+    color: whitesmoke;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    letter-spacing: 0.1em;
+    margin-bottom: 30px;
+}
+
+.inputBox{
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.inputBox input{
+    position: relative;
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #999;
+    background: transparent;
+    color: #fff;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+}
+
+.inputBox input,
+.form-row select,
+.form-row input[type="date"] {
+    text-align: center;
+}
+
+.inputBox input:focus,
+.inputBox input:valid{
+    border-bottom: 2px solid var(--crl);
+}
+
+.inputBox label{
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    pointer-events: none;
+    color: #999;
+    text-transform: uppercase;
+}
+
+form input[type="submit"]{
+    background: var(--crl);
+    align-self: center;
+    border: none;
+    padding: 15px;
+    border-radius: 50px;
+    color: #1c2630;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+form input[type="submit"]:hover{
+    letter-spacing: 0.35em;
+}
+
+form p{
+    color: var(--crl);
+    font-style: italic;
+    font-size: small;
+    margin-bottom: 10px;
+}
+
+form p a{
+    color: var(--crl);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.inputBox label span{
+    position: relative;
+    display: inline-flex;
+    letter-spacing: 0.05em;
+    transition: 0.2s ease-in-out;
+}
+
+.inputBox input:focus ~ label span, 
+.inputBox input:valid ~ label span{
+    color: var(--crl);
+    letter-spacing: 0.15em;
+    transform: translateY(-25px);
+}
+
+.modal {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    width: 80%;
+    max-width: 700px;
+}
+
+.modal-content h3 {
+    color: gold;
+    font-size: 1.5em;
+}
+
+.modal-content p{
+    font-style: italic;
+    font-size: 0.8em;
+    margin: 10px;
+    margin-bottom: 30px;
+}
+
+.modal-content button {
+    background: var(--crl);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #1c2630;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.modal-content button:hover {
+    background: palegoldenrod;
+}
+
+/* Group container for date and model selection */
+.form-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    
+}
+
+.form-row .inputBox {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+}
+
+/* Style the select dropdown and date picker to match input fields */
+.form-row select,
+.form-row input[type="date"] {
+    margin: 20px;
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    border-bottom: 2px solid #999;
+    background: transparent;
+    color: #fff;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: border-color 0.3s;
+}
+
+.form-row select option {
+    color: gray;
+}
+
+.form-row select:focus,
+.form-row input[type="date"]:focus {
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.form-row label {
+    position: relative;
+    left: 0;
+    padding: 10px;
+    pointer-events: none;
+    color: #999;
+    text-transform: uppercase;
+}
+
+.form-row select:focus ~ label,
+.form-row input[type="date"]:focus ~ label {
+    color: var(--primary-color);
+    transform: translateY(-20px);
+    font-size: 0.8em;
+}
+
+
+
