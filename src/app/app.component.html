@@ -1,0 +1,76 @@
+
+<div>
+  <app-card  *ngFor="let voz of vozaci; index as indeks; first as prv; last as posleden; odd as nepar; even as par"
+  
+  (click)="onAppView()"  [motov]="voz"
+  [indx]="indeks+1"
+  [class.is-first] = "prv"
+  
+  [class.is-even] = "par"
+  [class.is-odd] = "nepar"
+
+  [class.is-last] = "posleden"
+  ></app-card>
+
+  <button (click)="Dze()">Iznenagjenje</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <div [ngStyle]="{'display': isVisible ? 'block' : 'none'}">
+      ZA DOMA: <br>
+      aria-live <br>
+      aria-label<br>
+      aria-describedby <br>
+      aria-describedby with Visual Styling <br>
+      aria-expanded <br>
+      aria-hidden <br>
+      aria-role="region" <br>
+      aria-tooltip / aria-labelledby <br>
+      aria-invalid <br>
+      aria-live vklucuvajki Visual Feedback <br>
+      aria-busy <br>
+  </div>
+</div>

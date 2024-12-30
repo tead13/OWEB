@@ -1,0 +1,59 @@
+<div *ngIf="motov?.name != undefined" [ngClass]="klasi2()">
+    
+    <ng-template role="alert" aria-live="polite" #noImg>
+        Ska slika
+    </ng-template>
+    
+    <div role="heading" aria-level="2" [style.text-decoration]="stilovi()">
+        {{indx +'. '+ motov?.name}}
+    </div>
+
+    <img width="300" *ngIf="motov?.iconUrl; else noImg" 
+    [src]="motov?.iconUrl"
+    alt="this is a image"
+    role="img" 
+    [attr.aria-label]="'Icon image for ' + motov?.name">
+
+    
+
+    <div>
+        {{motov?.team}}
+    </div>
+
+    <div>
+        Points: {{motov?.points}}
+    </div>
+
+    <div [ngSwitch]="motov?.category">
+
+        <div *ngSwitchCase="'EXPERT'">EXPERT</div>
+        <div *ngSwitchCase="'LUNATIC'">5arda</div>
+        <div *ngSwitchCase="'ASD'">Dusicka</div>
+        <div *ngSwitchDefault>No comment</div>
+
+
+    </div>
+
+    <button aria-label="Open image in new tab" (click)="onDrvView()">View driver</button>
+
+    <div>
+        &nbsp;
+    </div>
+
+
+</div>
+
+
+<!--moj kod
+<div class="driver-list">
+    <div class="driver-card" *ngFor="let driver of drivers">
+      <img [src]="driver.image" [alt]="driver.name" class="driver-pic">
+      
+      <div class="info-section">
+        <div class="driver-name">{{driver.name}}</div>
+        <div class="points">Points: {{driver.points}}</div>
+        <button class="view-btn" (click)="viewDriver(driver)">View driver</button>
+      </div>
+    </div>
+  </div>-->
+
