@@ -1,0 +1,88 @@
+.driver-card {
+    padding: 15px;
+    margin: 10px;
+    border-radius: 8px;
+    display: flex;
+    gap: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+  
+.driver-card:hover {
+    transform: translateY(-3px);
+    cursor: pointer;
+}
+  
+.begin {
+    background-color: #e6f3ff;
+    border: 2px solid #b3d9ff;
+}
+  
+.adv {
+    background-color: #fff3e6;
+    border: 2px solid #ffd9b3;
+}
+  
+.undr {
+    text-decoration: underline;
+}
+  
+  /*slika*/
+.driver-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+  
+  /*tekstot so informacii*/
+.info-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+  
+.driver-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+  
+.points {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+  
+  /*kopce*/
+.view-btn {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: fit-content;
+}
+  
+.view-btn:hover {
+    background-color: #357abd;
+}
+  
+  /*da moze da pristapi i od dr uredi, pr mobilen */
+@media screen and (max-width: 600px) {
+    .driver-card {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .info-section {
+      align-items: center;
+    }
+  
+    .driver-pic {
+      margin-bottom: 10px;
+    }
+}

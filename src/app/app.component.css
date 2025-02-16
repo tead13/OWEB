@@ -1,0 +1,41 @@
+:host {
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    color: #333; 
+}
+
+.is-odd {
+    color: #2ecc71;
+    font-weight: bold;
+}
+
+.is-even {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.is-first {
+    color: #f1c40f;
+    font-style: italic;
+}
+
+.is-last {
+    color: #e67e22;
+    text-transform: uppercase;
+}
+
+.undr {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+    color: #3498db;
+}
+
+.is-odd:hover,
+.is-even:hover,
+.is-first:hover,
+.is-last:hover,
+.undr:hover {
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
