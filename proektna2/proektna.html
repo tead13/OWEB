@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Auto Sales</title>
+    <link rel="stylesheet" href="proektna.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <h1>Premium Auto Sales</h1>
+            <nav>
+                <ul>
+                    <li><a href="proektna.html">Почетна</a></li>
+                    <li><a href="#new-vehicles">Нови возила</a></li>
+                    <li><a href="#used-vehicles">Поволни возила</a></li>
+                    <li><a href="testVozenje.html">Закажи тест возење</a></li>
+                    <li><a href="logIn.html">Регистрирај се</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- naslovna -->
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Пронајди го совршеното возило за тебе</h2>
+                <p>Истражи ја нашата богата колекција на автомобили</p>
+            </div>
+        </section>
+        
+        
+        <!-- izvesuvanje ponuda -->
+        <div id="announcement-banner" class="announcement">
+            <p>Понуда на неделата: -15% на избрани модели !</p>
+            <button class="close-announcement">&times;</button>
+        </div>
+
+        <!-- New Vehicles Section -->
+        <section id="new-vehicles" class="category-section">
+            <h2>Нови возила</h2>
+            <div class="car-grid">
+            </div>
+        </section>
+
+        <!-- Used Vehicles Section -->
+        <section id="used-vehicles" class="category-section">
+            <h2>Поволни возила</h2>
+            <div class="car-grid">
+            </div>
+        </section>
+
+        <!--POPUP koga ke se klikne na carcard-->
+        <div id="car-details-popup" class="popup-container">
+            <div class="popup-content">
+                <button class="close-popup">&times;</button>
+                <div class="popup-header">
+                    <div class="popup-slider">
+                        <img src="" alt="Car Image" class="popup-image">
+                        <button class="popup-prev">&lt;</button>
+                        <button class="popup-next">&gt;</button>
+                    </div>
+                    <div class="popup-title-price">
+                        <h3 class="popup-name"></h3>
+                        <p class="popup-price"></p>
+                    </div>
+                </div>
+                <div class="popup-details">
+                    <p class="popup-color"></p>
+                    <p class="popup-year"></p>
+                    <p class="popup-kilometers"></p>
+                    <p class="popup-engine"></p>
+                    <p class="popup-description"></p>
+                </div>
+                <div class="popup-actions">
+                    <button class="like-button">
+                        <i></i>
+                        <span class="like-count">0</span>
+                    </button>
+                </div>
+                <div class="comment-section">
+                    <input type="text" class="comment-input" placeholder="Add a comment...">
+                    <button class="comment-button">Submit</button>
+                    <div class="comments-list"></div>
+                </div>
+            </div>
+        </div>
+    
+        
+
+        <!-- brendovi -->
+        <section class="brands-section">
+            <h2>Најбараните брендови</h2>
+            <div class="brands-grid">
+                <div class="brand-card">
+                    <img src= "audi.png" alt="Audi">
+                    <h3>Audi</h3>
+                </div>
+                <div class="brand-card">
+                    <img src="BMW.png" alt="BMW">
+                    <h3>BMW</h3>
+                </div>
+                <div class="brand-card">
+                    <img src="Mercedes.png" alt="Mercedes">
+                    <h3>Mercedes</h3>
+                </div>
+                <div class="brand-card">
+                    <img src="Mazda.png" alt="Mazda">
+                    <h3>Mazda</h3>
+                </div>            
+                <div class="brand-card">
+                    <img src="peugeot.png" alt="Peugeot">
+                    <h3>Peugeot</h3>
+                </div>
+            </div>
+        </section> 
+
+        <section id="survey-section">            
+            <h2>Анкета за импресии од сајтот</h2>
+            <form id="survey-form">
+              <div class="rating-section">
+                <label for="rating">Оценете го сајтот:</label>
+                <div class="stars" id="star-rating">
+                  <span data-value="1">☆</span>
+                  <span data-value="2">☆</span>
+                  <span data-value="3">☆</span>
+                  <span data-value="4">☆</span>
+                  <span data-value="5">☆</span>
+                </div>
+              </div>
+          
+              <div class="feedback-section">
+                <label for="feedback">Вашето мислење:</label>
+                <textarea id="feedback" name="feedback" rows="4" placeholder="Внесете ги вашите коментари тука..."></textarea>
+              </div>
+          
+              <button type="submit">Испрати</button>
+            </form>
+          
+            <div id="thank-you-message" style="display: none;">
+              <p>Ви благодариме за вашето мислење!</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Контактирај нѐ</h3>
+                <p>Email: info@premiumauto.com</p>
+                <p>Телефон: (+389) 78 223 305</p>
+            </div>
+            <div class="footer-section">
+                <h3>Брз пристап</h3>
+                <ul>
+                    <li><a href="#new-vehicles">Нови возила</a></li>
+                    <li><a href="#used-vehicles">Половни возила</a></li>
+                    <li><a href="testVozenje.html">Закажи тест возење</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Работно време:</h3>
+                <p>Понеделник - Петок: 9:00 - 20:00 </p>
+                <p>Сабота: 10:00 - 18:00 </p>
+                <p>Недела: Неработен</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="proektna.js"></script>
+</body>
+</html>

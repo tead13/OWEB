@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Тест возење</title>    
+        <link rel="stylesheet" type="text/css" href="testV.css">    
+    </head>
+    <body>
+        <form action="#" onsubmit="showSuccessModal(); return false;">
+            <h2>Закажи за тест возење</h2>
+            <p>За да закажеш тест возење исполни го формуларот</p>
+            <div class="inputBox">
+                <input type="text" id="name" required>
+                <label for="name">Име</label>
+            </div>
+            <div class="inputBox">
+                <input type="text" id="surname" required>
+                <label for="surname">Презиме</label>
+            </div>
+            <div class="inputBox">
+                <input type="text" id="email" required>
+                <label for="email">E-mail</label>
+            </div>
+            <div class="inputBox">
+                <input type="text" id="phone" required>
+                <label for="phone">Телефон</label>
+            </div>
+
+            <div class="form-row">
+                <div class="inputBox">
+                    <label>Избери &nbsp;автомобил</label>
+                    <select required>
+                        <option value="" disabled selected hidden>Модел</option>
+                        <option value="Audi">Audi</option>
+                        <option value="BMW">BMW</option>
+                        <option value="Mercedes">Mercedes</option>
+                        <option value="Mazda">Mazda</option>
+                        <option value="Peugeot">Peugeot</option>
+                    </select>
+                </div>
+            
+                <div class="inputBox">
+                    <label for="date">Избери &nbsp; термин</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+            </div>
+
+            <div class="inputBox">
+                <input type="submit" value="Аплицирај">
+            </div>
+
+        </form>
+
+        <!-- uspesna registracija -->
+        <div id="successModal" class="modal">
+            <div class="modal-content">
+                <h3>Успешнa апликација!</h3>
+                <p>Ќе добиете е-маил за потврда на терминот и дополнителни информации.</p>
+                <button onclick="goToHomePage()">Врати се на почетната страница</button>
+            </div>
+        </div>
+
+        <script>
+            //animacija na bukvi
+            document.querySelectorAll('label').forEach(label => {
+                label.innerHTML = label.innerText.split('').map((letters, i) => `<span style="transition-delay: ${i * 50}ms">${letters}</span>`).join('');
+            });
+
+            //uspesna registracija popup
+            function showSuccessModal() {
+                document.getElementById('successModal').style.display = 'flex';
+            }
+
+            //vrakjanje kon pocetna
+            function goToHomePage() {
+                window.location.href = 'proektna.html'; 
+            }
+
+            //zatvoranje na popup
+            window.onclick = function(event) {
+                const modal = document.getElementById('successModal');
+                if (event.target == modal) {
+                    modal.style.display = 'none';
+                }
+            };
+        </script>
+    </body>
+</html>
